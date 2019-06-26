@@ -35,21 +35,7 @@ public class Computer implements Comparable<Computer> {
 
     @Override
     public int compareTo(Computer comp) {
-        if (this.cpuSpeed > comp.cpuSpeed) {
-            return 1;
-        } else if (this.cpuSpeed == comp.cpuSpeed) {
-            if (this.ramMem > comp.ramMem) {
-                return 1;
-            } else if (this.ramMem == comp.ramMem) {
-                return this.computerName.compareTo(comp.computerName);
-
-            } else {
-                return -1;
-            }
-
-        } else {
-            return -1;
-        }
+        return this.computerName.compareTo(comp.computerName);
     }
 
     @Override
